@@ -41,5 +41,10 @@ body .countdown-box {
   align-items: flex-end;
 }
 body .countdown-box .countdown-box__word {
-  padding-right: 120px;
+  padding-right: 125px;
+}
+body .input-box {
+  border: 1px solid #e5e5e5;
+  width: 240px;
+  margin-left: 50px;
 }
