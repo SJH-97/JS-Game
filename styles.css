@@ -48,3 +48,11 @@ body .input-box {
   width: 240px;
   margin-left: 50px;
 }
+body .current-score-box {
+  border: 1px solid red;
+  height: 40px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
