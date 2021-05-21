@@ -15,7 +15,6 @@ body {
   background-color: #000000;
 }
 body .header-box {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -33,7 +32,6 @@ body .header-box .header-box__logo {
   font-size: 3rem;
 }
 body .countdown-box {
-  border: 1px solid red;
   height: 50px;
   padding-left: 50px;
   display: flex;
@@ -41,17 +39,26 @@ body .countdown-box {
   align-items: flex-end;
 }
 body .countdown-box .countdown-box__word {
+  color: #00e540;
   padding-right: 125px;
 }
 body .input-box {
+  color: #00e540;
   border: 1px solid #e5e5e5;
   width: 240px;
   margin-left: 50px;
 }
 body .current-score-box {
-  border: 1px solid red;
   height: 40px;
   padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+body .high-score-box {
+  color: #ed002b;
+  padding-left: 50px;
+  height: 25px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;

@@ -27,7 +27,7 @@ body {
   background-color: $color-background;
 
   .header-box {
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -47,7 +47,7 @@ body {
   }
 
   .countdown-box {
-    border: 1px solid red;
+    // border: 1px solid red;
     height: 50px;
     padding-left: 50px;
     display: flex;
@@ -55,20 +55,32 @@ body {
     align-items: flex-end;
 
     .countdown-box__word {
+      color: $color-green;
       padding-right: 125px;
     }
   }
 
   .input-box {
+    color: $color-green;
     border: 1px solid $color-white;
     width: 240px;
     margin-left: 50px;
   }
 
   .current-score-box {
-    border: 1px solid red;
+    // border: 1px solid red;
     height: 40px;
     padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .high-score-box {
+    color: $color-red;
+    // border: 1px solid green;
+    padding-left: 50px;
+    height: 25px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
