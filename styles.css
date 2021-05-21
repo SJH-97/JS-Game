@@ -4,3 +4,8 @@
   padding: 0;
   border: none;
 }
+
+html {
+  font-family: "VT323", cursive;
+  font-size: 20px;
+}

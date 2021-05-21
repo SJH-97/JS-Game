@@ -15,3 +15,9 @@ $color-background: #000000;
 $color-green: #00e540;
 $color-white: #e5e5e5;
 $color-red: #ed002b;
+
+//General font settings. Mobile first approach, scaling up of font to use rem units.
+html {
+  font-family: $font;
+  font-size: 20px;
+}
