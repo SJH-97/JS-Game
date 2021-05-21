@@ -32,3 +32,14 @@ body .header-box .header-box__logo {
   color: #00e540;
   font-size: 3rem;
 }
+body .countdown-box {
+  border: 1px solid red;
+  height: 50px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+body .countdown-box .countdown-box__word {
+  padding-right: 120px;
+}
