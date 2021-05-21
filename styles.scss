@@ -1,0 +1,17 @@
+// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// Importing Font
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+$font: "VT323", cursive;
+
+// Colours
+$color-background: #000000;
+$color-green: #00e540;
+$color-white: #e5e5e5;
+$color-red: #ed002b;
