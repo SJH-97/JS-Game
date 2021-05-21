@@ -8,4 +8,27 @@
 html {
   font-family: "VT323", cursive;
   font-size: 20px;
+  color: #e5e5e5;
+}
+
+body {
+  background-color: #000000;
+}
+body .header-box {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 300px;
+  padding-left: 50px;
+}
+body .header-box .header-box__title {
+  color: #00e540;
+  font-size: 2.5rem;
+  padding-right: 10px;
+}
+body .header-box .header-box__logo {
+  color: #00e540;
+  font-size: 3rem;
 }
