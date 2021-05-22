@@ -1,12 +1,12 @@
-const displayWord = document.getElementsByClassName("countdown-box__word");
-const displayTimer = document.getElementsByClassName("countdown-box__clock");
-const inputScreen = document.getElementsByClassName("input-box__text");
-const scoreScreen = document.getElementsByClassName("current-score__text");
-const highScoreScreen = document.getElementsByClassName("high-score-box__text");
+const displayWord = document.querySelector(".countdown-box__word");
+const displayTimer = document.querySelector(".countdown-box__clock");
+const inputScreen = document.querySelector(".input-box__text");
+const scoreScreen = document.querySelector(".current-score__text");
+const highScoreScreen = document.querySelector(".high-score-box__text");
 
 //startGame Function, Holds the countDown function, randomWord function and resetGame function.
 const startGame = () => {
-  displayWord.innerHTML(randomWord());
+  displayWord.textContent = randomWord();
   countDownFunction();
 };
 

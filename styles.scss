@@ -47,24 +47,26 @@ body {
   }
 
   .countdown-box {
-    // border: 1px solid red;
+    border: 1px solid red;
     height: 50px;
-    padding-left: 50px;
+    width: 240px;
+    margin-left: 50px;
+
+    // padding-left: 50px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 
     .countdown-box__word {
       color: $color-green;
-      padding-right: 125px;
+      width: fit-content;
+      margin-right: 100px;
+    }
+
+    .countdown-box__clock {
+      border: 1px solid red;
     }
   }
-
-  // .input-box {
-  //   color: $color-green;
-  //   border: 1px solid $color-white;
-  //   width: 240px;
-  //   margin-left: 50px;
 
   input {
     border: 1px solid $color-white;

@@ -32,15 +32,21 @@ body .header-box .header-box__logo {
   font-size: 3rem;
 }
 body .countdown-box {
+  border: 1px solid red;
   height: 50px;
-  padding-left: 50px;
+  width: 240px;
+  margin-left: 50px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
 body .countdown-box .countdown-box__word {
   color: #00e540;
-  padding-right: 125px;
+  width: fit-content;
+  margin-right: 100px;
+}
+body .countdown-box .countdown-box__clock {
+  border: 1px solid red;
 }
 body input {
   border: 1px solid #e5e5e5;
