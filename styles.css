@@ -42,11 +42,14 @@ body .countdown-box .countdown-box__word {
   color: #00e540;
   padding-right: 125px;
 }
-body .input-box {
-  color: #00e540;
+body input {
   border: 1px solid #e5e5e5;
+  font-family: "VT323", cursive;
+  color: #00e540;
+  background-color: #000000;
   width: 240px;
   margin-left: 50px;
+  height: 25px;
 }
 body .current-score-box {
   height: 40px;

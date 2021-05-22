@@ -60,12 +60,22 @@ body {
     }
   }
 
-  .input-box {
-    color: $color-green;
+  // .input-box {
+  //   color: $color-green;
+  //   border: 1px solid $color-white;
+  //   width: 240px;
+  //   margin-left: 50px;
+
+  input {
     border: 1px solid $color-white;
+    font-family: $font;
+    color: $color-green;
+    background-color: $color-background;
     width: 240px;
     margin-left: 50px;
+    height: 25px;
   }
+  // }
 
   .current-score-box {
     // border: 1px solid red;
