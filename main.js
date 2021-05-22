@@ -1,6 +1,8 @@
 const displayWord = document.getElementsByClassName("countdown-box__word");
 const displayTimer = document.getElementsByClassName("countdown-box__clock");
 const inputScreen = document.getElementsByClassName("input-box__text");
+const scoreScreen = document.getElementsByClassName("current-score__text");
+const highScoreScreen = document.getElementsByClassName("high-score-box__text");
 
 //startGame Function, Holds the countDown function, randomWord function and resetGame function.
 const startGame = () => {
