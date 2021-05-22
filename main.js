@@ -1,5 +1,6 @@
 const displayWord = document.getElementsByClassName("countdown-box__word");
 const displayTimer = document.getElementsByClassName("countdown-box__clock");
+const inputScreen = document.getElementsByClassName("input-box__text");
 
 //startGame Function, Holds the countDown function, randomWord function and resetGame function.
 const startGame = () => {
@@ -7,8 +8,8 @@ const startGame = () => {
   countDownFunction();
 };
 
-// let score = 0;
-// let highScore = 0;
+let score = 0;
+let highScore = 0;
 // let inputScreen = "type 'start' to play";
 // // let randomWord = "";
 let timer = 10 + "s";
@@ -26,6 +27,18 @@ const countDown = () => {
       displayTimer.innerHTML = timer + "s";
     }
   });
+};
+
+// const initialiseGame = document.addEventListener("mouseover", (event) => {
+//   startGame();
+// });
+
+const displayScore = () => {
+  if (highScore != Number) {
+    score = highScore;
+  } else if (score > highScore) {
+    score = highScore;
+  }
 };
 
 const wordArray = [
