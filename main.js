@@ -1,8 +1,22 @@
-let score = 0;
-let highScore = 0;
-let inputScreen = "type 'start' to play";
-// let randomWord = "";
-let timer = 10 + "s";
+const displayWord = document.getElementsByClassName("countdown-box__word");
+const displayTimer = document.getElementsByClassName("countdown-box__clock");
+
+//startGame Function, Holds the countdown function, randomWord function and reset function.
+const startGame = () => {
+  displayWord.innerHTML(randomWord());
+};
+
+// let score = 0;
+// let highScore = 0;
+// let inputScreen = "type 'start' to play";
+// // let randomWord = "";
+// let timer = 10 + "s";
+
+const randomWord = () => {
+  wordArray[Math.floor(Math.random() * wordArray.length)];
+};
+
+const countdown = () => {};
 
 const wordArray = [
   "cheese",
@@ -138,5 +152,3 @@ const wordArray = [
   "impala",
   "guitar",
 ];
-
-const randomWord = () => {};
