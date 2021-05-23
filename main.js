@@ -4,6 +4,14 @@ const inputScreen = document.querySelector(".input-box__text");
 const scoreScreen = document.querySelector(".current-score__text");
 const highScoreScreen = document.querySelector(".high-score-box__text");
 
+const initialiseGame = () => {
+  if (inputScreen.textContent === "start") {
+    startGame();
+  } else {
+    return;
+  }
+};
+
 //startGame Function, Holds the countDown function, randomWord function and resetGame function.
 const startGame = () => {
   displayWord.textContent = randomWord();
@@ -30,10 +38,6 @@ const countDown = () => {
     }
   });
 };
-
-// const initialiseGame = document.addEventListener("mouseover", (event) => {
-//   startGame();
-// });
 
 const displayScore = () => {
   if (highScore != Number) {
