@@ -4,6 +4,10 @@ const inputScreen = document.querySelector(".input-box__text");
 const scoreScreen = document.querySelector(".current-score__text");
 const highScoreScreen = document.querySelector(".high-score-box__text");
 
+//Default screen
+inputScreen.placeholder = "type 'start' to play!";
+displayTimer.textContent = "10s";
+
 const initialiseGame = () => {
   if (inputScreen.textContent === "start") {
     startGame();
