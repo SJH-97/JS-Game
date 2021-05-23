@@ -47,7 +47,6 @@ body {
   }
 
   .countdown-box {
-    border: 1px solid red;
     height: 50px;
     width: 240px;
     margin-left: 50px;
@@ -59,12 +58,11 @@ body {
 
     .countdown-box__word {
       color: $color-green;
-      width: fit-content;
-      margin-right: 100px;
+      width: 250px;
     }
 
     .countdown-box__clock {
-      border: 1px solid red;
+      position: static;
     }
   }
 
@@ -77,7 +75,6 @@ body {
     margin-left: 50px;
     height: 25px;
   }
-  // }
 
   .current-score-box {
     // border: 1px solid red;

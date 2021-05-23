@@ -32,7 +32,6 @@ body .header-box .header-box__logo {
   font-size: 3rem;
 }
 body .countdown-box {
-  border: 1px solid red;
   height: 50px;
   width: 240px;
   margin-left: 50px;
@@ -42,11 +41,10 @@ body .countdown-box {
 }
 body .countdown-box .countdown-box__word {
   color: #00e540;
-  width: fit-content;
-  margin-right: 100px;
+  width: 250px;
 }
 body .countdown-box .countdown-box__clock {
-  border: 1px solid red;
+  position: static;
 }
 body input {
   border: 1px solid #e5e5e5;
