@@ -4,42 +4,6 @@ const inputScreen = document.querySelector(".input-box__text");
 const scoreScreen = document.querySelector(".current-score__text");
 const highScoreScreen = document.querySelector(".high-score-box__text");
 
-//Default screen
-displayWord.textContent = "welcome!";
-inputScreen.placeholder = "type 'start' to play";
-
-document.addEventListener("load", (event) => {
-  event.countDown();
-});
-
-// const randomWord = () => {
-//   wordArray[Math.floor(Math.random() * wordArray.length)];
-// };
-
-const countDown = () => {
-  let countDownFunction = setInterval(function () {
-    if (timer <= 0) {
-      clearInterval(countDownFunction);
-      displayTimer.innerHTML = "Game Over!";
-    } else {
-      displayTimer.innerHTML = timer + "s";
-    }
-  });
-  return countDown;
-};
-
-// displayScore = () => {
-//   if (highScore != Number) {
-//     score = highScore;
-//   } else if (score > highScore) {
-//     score = highScore;
-//   }
-// }
-
-let score = 0;
-let highScore = 0;
-let timer = 10;
-
 const wordArray = [
   "cheese",
   "amused",
