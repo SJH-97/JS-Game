@@ -18,3 +18,19 @@ import { wordsArr } from "./word-array.js";
 //   }
 //   startTime -= 1;
 // }, 1000);
+
+// High Score Functionality
+// let score = 10;
+// let highScore = 10;
+
+// const updateScore = () => {
+//   if (score >= highScore) {
+//     document.getElementById("hscore").innerHTML = `High Score:${score}`;
+//   } else if (score < highScore) {
+//     return;
+//   } else {
+//     alert("error!");
+//   }
+// };
+
+// updateScore();
