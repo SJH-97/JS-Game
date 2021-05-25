@@ -32,5 +32,12 @@ import { wordsArr } from "./word-array.js";
 //     alert("error!");
 //   }
 // };
-
 // updateScore();
+
+// Initialising the game:
+document.getElementById("inputs").addEventListener("oninput", () => {
+  if (input.value == 0) {
+    alert("its working");
+  }
+  console.log();
+});
