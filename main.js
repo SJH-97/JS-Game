@@ -35,9 +35,13 @@ import { wordsArr } from "./word-array.js";
 // updateScore();
 
 // Initialising the game:
-document.getElementById("inputs").addEventListener("oninput", () => {
-  if (input.value == 0) {
-    alert("its working");
-  }
-  console.log();
-});
+// window.addEventListener("load", () => {
+//   document.querySelector("input").oninput = initialiseGame;
+// });
+
+// const initialiseGame = () => {
+//   const text = document.querySelector("input").value.toLowerCase();
+//   if (text == "start") {
+//     alert("its working");
+//   }
+// };
