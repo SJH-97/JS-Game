@@ -15,6 +15,7 @@ const initialiseGame = () => {
   }
 };
 
+// playGame -> Master function, calls sub-functions.
 const playGame = () => {
   initialiseTimer();
   document.getElementById("word").innerHTML = randomWord;
@@ -57,4 +58,5 @@ const updateScore = () => {
 // resetting input after typing correct word
 const resetInputBox = () => {
   document.querySelector("input").value = "";
+  document.querySelector("input").placeholder = "";
 };
