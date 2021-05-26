@@ -1,5 +1,19 @@
 import { wordsArr } from "./word-array.js";
 
+// Initialising the game:
+window.addEventListener("load", () => {
+  document.querySelector("input").oninput = initialiseGame;
+  document.querySelector("input").placeholder = "type 'start' to play";
+  document.querySelector("#clock").innerHTML = "10s";
+});
+
+const initialiseGame = () => {
+  const text = document.querySelector("input").value.toLowerCase();
+  if (text == "start") {
+    alert("its working");
+  }
+};
+
 // Word Array functionality
 
 // const randomWord = wordsArr[Math.floor(Math.random() * wordsArr.length)];
@@ -33,15 +47,3 @@ import { wordsArr } from "./word-array.js";
 //   }
 // };
 // updateScore();
-
-// Initialising the game:
-// window.addEventListener("load", () => {
-//   document.querySelector("input").oninput = initialiseGame;
-// });
-
-// const initialiseGame = () => {
-//   const text = document.querySelector("input").value.toLowerCase();
-//   if (text == "start") {
-//     alert("its working");
-//   }
-// };
