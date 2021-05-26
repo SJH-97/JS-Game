@@ -10,40 +10,44 @@ window.addEventListener("load", () => {
 const initialiseGame = () => {
   const text = document.querySelector("input").value.toLowerCase();
   if (text == "start") {
-    alert("its working");
+    playGame();
   }
+};
+
+const playGame = () => {
+  initialiseTimer();
 };
 
 // Word Array functionality
 
-// const randomWord = wordsArr[Math.floor(Math.random() * wordsArr.length)];
-
-// document.getElementById("word").innerHTML = randomWord;
+const randomWord = wordsArr[Math.floor(Math.random() * wordsArr.length)];
 
 // Countdown Timer functionality
-// let startTime = 10;
+let startTime = 10;
 
-// const countDownTimer = setInterval(() => {
-//   if (startTime <= 0) {
-//     clearInterval(countDownTimer);
-//     document.querySelector("input").value = "Game Over!";
-//   } else {
-//     document.getElementById("clock").innerHTML = startTime + "s";
-//   }
-//   startTime -= 1;
-// }, 1000);
+const initialiseTimer = () => {
+  const countDownTimer = setInterval(() => {
+    if (startTime <= 0) {
+      clearInterval(countDownTimer);
+      document.querySelector("input").value = "Game Over!";
+    } else {
+      document.getElementById("clock").innerHTML = startTime + "s";
+    }
+    startTime -= 1;
+  }, 1000);
+};
 
 // High Score Functionality
-// let score = 10;
-// let highScore = 10;
+let score = 10;
+let highScore = 10;
 
-// const updateScore = () => {
-//   if (score >= highScore) {
-//     document.getElementById("hscore").innerHTML = `High Score:${score}`;
-//   } else if (score < highScore) {
-//     return;
-//   } else {
-//     alert("error!");
-//   }
-// };
+const updateScore = () => {
+  if (score >= highScore) {
+    document.getElementById("hscore").innerHTML = `High Score:${score}`;
+  } else if (score < highScore) {
+    return;
+  } else {
+    alert("error!");
+  }
+};
 // updateScore();
