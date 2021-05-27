@@ -1,9 +1,10 @@
 import { wordsArr } from "./word-array.js";
 
-//default screen
+//Default screen
 document.querySelector("input").placeholder = "type 'start' to play";
 document.querySelector("#clock").innerHTML = "10s";
 
+//Initialising the game
 window.addEventListener("load", () => {
   document.querySelector("input").oninput = initialiseGame;
 });
@@ -14,10 +15,11 @@ const initialiseGame = () => {
     getRandomWord();
     resetInputBox();
     initialiseTimer();
+    document.getElementById("resetgame").innerHTML = "";
   }
 };
 
-//If player correctly types-in the random word from the array -> clear the input box and give them a new word.
+//If player correctly types-in the random word from the array -> clear the input box then give them a new word, add 1 second to the timer and add 1 to the current score.
 let inputBox = document.querySelector("input");
 const compareWords = (value) => {
   wordsArr.forEach((word) => {
@@ -33,22 +35,24 @@ const compareWords = (value) => {
 
 inputBox.addEventListener("keyup", () => {
   compareWords(inputBox.value);
+  if (inputBox.value === "start") {
+    initialiseGame();
+  }
 });
 
-// Word Array functionality
+//Word Array functionality
 const getRandomWord = () => {
   const randomWord = wordsArr[Math.floor(Math.random() * wordsArr.length)];
   document.getElementById("word").innerHTML = randomWord;
 };
 
-// Countdown Timer functionality
-
+//Countdown Timer functionality
 let startTime = 10;
 const initialiseTimer = () => {
   const countDownTimer = setInterval(() => {
     if (startTime <= 0) {
       clearInterval(countDownTimer);
-      document.querySelector("input").placeholder = "Game Over!";
+      resetGame();
     } else {
       document.getElementById("clock").innerHTML = startTime + "s";
     }
@@ -56,17 +60,17 @@ const initialiseTimer = () => {
   }, 1000);
 };
 
-// Current Score & High Score Functionality
+//Current Score & High Score Functionality
 let score = 0;
 let highScore = 0;
 
 const currentScore = () => {
-  document.getElementById("cscore").innerHTML = `Score:${score}`;
+  document.getElementById("cscore").innerHTML = `Score: ${score}`;
 };
 
 const updateScore = () => {
   if (score >= highScore) {
-    document.getElementById("hscore").innerHTML = `High Score:${score}`;
+    document.getElementById("hscore").innerHTML = `High Score: ${score}`;
   } else if (score < highScore) {
     return;
   } else {
@@ -74,8 +78,21 @@ const updateScore = () => {
   }
 };
 
-// resetting input after typing correct word
+//Resetting the input box
 const resetInputBox = () => {
   document.querySelector("input").value = "";
   document.querySelector("input").placeholder = "";
+};
+
+//Resetting the game
+const resetGame = () => {
+  document.getElementById("cscore").innerHTML = `Score:`;
+  updateScore();
+  resetInputBox();
+  score = 0;
+  document.querySelector("#word").innerHTML = "Game Over! ";
+  document.getElementById("clock").innerHTML = "";
+  document.getElementById("resetgame").innerHTML = "type 'start' to play again";
+
+  startTime = 10;
 };

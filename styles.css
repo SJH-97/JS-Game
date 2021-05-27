@@ -70,3 +70,7 @@ body .high-score-box {
   flex-direction: row;
   align-items: flex-end;
 }
+body .reset-game-box {
+  padding-left: 50px;
+  margin-top: 5px;
+}
