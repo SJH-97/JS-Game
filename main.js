@@ -1,29 +1,30 @@
 import { wordsArr } from "./word-array.js";
 
-// Initialising the game:
-window.addEventListener("load", () => {
-  document.querySelector("input").oninput = initialiseGame;
-  document.querySelector("input").placeholder = "type 'start' to play";
-  document.querySelector("#clock").innerHTML = "10s";
+//default screen
+document.querySelector("input").placeholder = "type 'start' to play";
+document.querySelector("#clock").innerHTML = "10s";
+
+let inputBox = document.querySelector("input");
+const compareWords = (value) => {
+  wordsArr.forEach((word) => {
+    if (word === value || value === "start") {
+      getRandomWord();
+      resetInputBox();
+    }
+  });
+  initialiseTimer();
+};
+
+inputBox.addEventListener("keyup", () => {
+  console.log(inputBox.value);
+  compareWords(inputBox.value);
 });
 
-const initialiseGame = () => {
-  const text = document.querySelector("input").value.toLowerCase();
-  if (text == "start") {
-    playGame();
-    resetInputBox();
-  }
-};
-
-// playGame -> Master function, calls sub-functions.
-const playGame = () => {
-  initialiseTimer();
+// Word Array functionality
+const getRandomWord = () => {
+  const randomWord = wordsArr[Math.floor(Math.random() * wordsArr.length)];
   document.getElementById("word").innerHTML = randomWord;
 };
-
-// Word Array functionality
-
-const randomWord = wordsArr[Math.floor(Math.random() * wordsArr.length)];
 
 // Countdown Timer functionality
 
@@ -53,7 +54,7 @@ const updateScore = () => {
     alert("error!");
   }
 };
-// updateScore();
+updateScore();
 
 // resetting input after typing correct word
 const resetInputBox = () => {
