@@ -4,19 +4,34 @@ import { wordsArr } from "./word-array.js";
 document.querySelector("input").placeholder = "type 'start' to play";
 document.querySelector("#clock").innerHTML = "10s";
 
+window.addEventListener("load", () => {
+  document.querySelector("input").oninput = initialiseGame;
+});
+
+const initialiseGame = () => {
+  const text = document.querySelector("input").value.toLowerCase();
+  if (text == "start") {
+    getRandomWord();
+    resetInputBox();
+    initialiseTimer();
+  }
+};
+
+//If player correctly types-in the random word from the array -> clear the input box and give them a new word.
 let inputBox = document.querySelector("input");
 const compareWords = (value) => {
   wordsArr.forEach((word) => {
-    if (word === value || value === "start") {
+    if (word === value) {
       getRandomWord();
       resetInputBox();
+      startTime += 1;
+      score += 1;
+      currentScore();
     }
   });
-  initialiseTimer();
 };
 
 inputBox.addEventListener("keyup", () => {
-  console.log(inputBox.value);
   compareWords(inputBox.value);
 });
 
@@ -41,9 +56,13 @@ const initialiseTimer = () => {
   }, 1000);
 };
 
-// High Score Functionality
-let score = 10;
-let highScore = 10;
+// Current Score & High Score Functionality
+let score = 0;
+let highScore = 0;
+
+const currentScore = () => {
+  document.getElementById("cscore").innerHTML = `Score:${score}`;
+};
 
 const updateScore = () => {
   if (score >= highScore) {
@@ -54,7 +73,6 @@ const updateScore = () => {
     alert("error!");
   }
 };
-updateScore();
 
 // resetting input after typing correct word
 const resetInputBox = () => {
