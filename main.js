@@ -47,6 +47,7 @@ const getRandomWord = () => {
 };
 
 //Countdown Timer functionality
+
 let startTime = 10;
 const initialiseTimer = () => {
   const countDownTimer = setInterval(() => {
@@ -54,9 +55,10 @@ const initialiseTimer = () => {
       clearInterval(countDownTimer);
       resetGame();
     } else {
-      document.getElementById("clock").innerHTML = startTime + "s";
+      // console.log(typeof startTime);
+      document.getElementById("clock").innerHTML = startTime.toFixed(0) + "s";
     }
-    startTime -= 1;
+    startTime -= 1.0;
   }, 1000);
 };
 
