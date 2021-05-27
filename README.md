@@ -2,6 +2,8 @@
 
 A fun game using vanilla JS, SCSS, CSS and HTML!
 
+The BEM naming convention has been used for simplicity and readability.
+
 Link to Figma Framework:
 https://www.figma.com/file/UiZcyrvrtvaYCehsu04rPX/Untitled?node-id=0%3A1
 
