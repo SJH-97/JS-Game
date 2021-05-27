@@ -54,6 +54,7 @@ body input {
   width: 240px;
   margin-left: 50px;
   height: 25px;
+  outline: none;
 }
 body .current-score-box {
   height: 40px;
@@ -73,4 +74,64 @@ body .high-score-box {
 body .reset-game-box {
   padding-left: 50px;
   margin-top: 5px;
+}
+
+@media screen and (min-width: 758px) {
+  html {
+    font-size: 50px;
+  }
+
+  .countdown-box {
+    margin: 0px;
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .countdown-box .countdown-box__word {
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 540px;
+  }
+  .countdown-box .countdown-box__clock {
+    position: absolute;
+  }
+
+  .input-box {
+    width: 700px;
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .input-box input {
+    margin: 0;
+    width: 600px;
+    height: 70px;
+    font-size: 50px;
+  }
+
+  .current-score-box {
+    margin-top: 50px;
+  }
+
+  .high-score-box {
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+
+  .reset-game-box {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    padding-left: 150px;
+  }
+
+  .countdown-box__word {
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
