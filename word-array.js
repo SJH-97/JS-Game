@@ -149,4 +149,7 @@ export const wordsArr = [
   "horizon",
   "chicken-dippa",
   "cola",
+  "necronomicon",
+  "roadman",
+  "pot-pie",
 ];

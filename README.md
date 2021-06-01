@@ -18,3 +18,7 @@ Typing the word exactly will add 1s to the coundown timer and will add one point
 The aim of the game is to type out as many words as possible before the timer runs out and therefore gain the highest score possible.
 
 Upon the countdown timer finishing the game will return to the default state; prompting the timer to reset. The highscore from the previous game will also be presented and will only update if current score > high score.
+
+To do:
+bug - once one word/words has been inputed it can be used again and again to add to the score, even when timer has reached 0.
+sound - add game sound using the Howler npm package?
