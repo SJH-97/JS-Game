@@ -21,4 +21,4 @@ Upon the countdown timer finishing the game will return to the default state; pr
 
 To do:
 bug - once one word/words has been inputed it can be used again and again to add to the score, even when timer has reached 0.
-sound - add game sound using the Howler npm package?
+sound - add game sound using the Howler npm package? (DONE)
