@@ -1,13 +1,12 @@
 import { wordsArr } from "./word-array.js";
 
+//Music
 const theme = new Howl({
   src: "./sounds/TypeQuest.wav",
   volume: 0.5,
   loop: true,
 });
-
 theme.play();
-
 //
 
 //Default screen
