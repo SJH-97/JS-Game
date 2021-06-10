@@ -52,6 +52,7 @@ body input {
   color: #00e540;
   background-color: #000000;
   width: 240px;
+  padding-left: 10px;
   margin-left: 50px;
   height: 25px;
   outline: none;
